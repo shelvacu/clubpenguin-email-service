@@ -1,0 +1,95 @@
+!!!
+%html
+  %head
+    %title CLUB PENGUIN SPEEDRUNNING BLAAAAAAAAAAAAAA
+    :css
+      html, body{
+        margin: 0;
+        padding: 0;
+      }
+      #copyemail_button{
+        height: 100px;
+        width: 95%;
+      }
+      #version_thingy{
+        position: fixed;
+        bottom: 5px;
+        right: 5px;
+        color: #888;
+      }
+      #main_body{
+        padding: 10px;
+      }
+  %body
+    #main_body
+      %button(type="button" id="copyemail_button" onclick="copyemail()" disabled)
+        Copy email address and open club penguin registration page
+      %br
+      %textarea(id="email")
+      :markdown
+        ## Instructions for Firefox:
+
+        1. Open 24nm.us (You're doing good so far!)
+        2. Spam-click on the big button on the top until a page opens (should be pretty 
+           fast, <1s hopefull) (no, I cannot automate it such that you don't have to click anything due to browser's security things)
+        3. Paste into all three fields (password, email, username). Note that not the 
+           entire email will be present in the username field; This is on purpose. I 
+           believe this to be fastest, however if you think you know a faster way then you can just paste into the email field and do whatever for password and username.
+        4. After submitting the registration, come back to this page and click the 
+           "allow popups from 24nm.us" under preferences in the bar at the top saying that a popup was blocked. A page will open and immediately close
+        5. Wait patiently.
+        6. Once the email from club penguin is recieved by the server, the activation page will automatically open.
+
+        ## Instructions for Chrome:
+
+        1. Install firefox. Unfortunately, chrome blocks popups and gives no easy way to re enable them, or something. So firefox is faster, I think.
+
+        ---
+
+        ## Changelog
+
+        #### 0.0.2
+
+        * Made the big button bigger.
+        * Finished writing the last step in the instructions for firefox.
+        * Added changelog.
+        * Added version thingy at the bottom-right of the page.
+        * Use only characters, no numbers in ID to avoid errors with club penguin not liking too many numbers in username.
+        
+        #### 0.0.1
+
+        * First version
+
+        ---
+      -#
+        %h3 Instructions for firefox:
+        %ol
+          %li Open 24nm.us
+          %li Spam-click on the big button on the top until a page opens (should be pretty fast, <1s hopefull) (no, I cannot automate it such that you don't have to click anything due to browser's security things)
+          -#%li Paste into all three fields (password, email, username). Note that not the entire email will be present in the username field; This is on purpose. I believe this to be fastest, however if you think you know a faster way then you can just paste into the email field and do whatever for password and username.
+          %li After submitting the registration, come back to this page and click the "allow popups from 24nm.us" under preferences in the bar at the top saying that a popup was blocked. A page will open and immediately close
+          %li Wait patiently.
+          %li Once the email from club penguin is recieved by the server, the activation page will automatically open.
+        %h3 Instructions for chrome:
+        %p Unfortunately chrome seems to block "popups" with no quick way to allow them that I can tell in the ~5 seconds I spent trying. Use firefox.
+        %br
+        %br
+        %h4 Changelog:
+        %ul
+          %li
+            %b 0.0.2
+            %br
+            Made the big button bigger
+            %br
+            Finished writing the last step in the instructions for firefox.
+            %br
+            Added changelog
+            %br
+            Added version thingy at the bottom-right of the page
+          %li
+            %b 0.0.1
+            First version.
+      %div(id="msgs")
+      %script(src="main.js")
+
+    #version_thingy v0.0.2
